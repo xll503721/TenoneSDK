@@ -13,6 +13,7 @@ if(OSX OR IOS)
 endif()
 
 add_library(${PROJECT_NAME} STATIC ${tenone_src_source})
+add_subdirectory(advertising)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES 
     XCODE_ATTRIBUTE_CLANG_ENABLE_OBJC_ARC "YES" #设置项目为arc
