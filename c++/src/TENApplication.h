@@ -11,8 +11,6 @@
 
 @interface TENApplication : NSObject
 
-- (void)test;
-
 @end
 
 #endif
