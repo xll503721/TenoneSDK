@@ -8,8 +8,6 @@
 
 
 class TenOne {
-    
-    static bool OS
 private:
     int t;
     
