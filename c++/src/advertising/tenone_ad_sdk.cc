@@ -21,6 +21,7 @@ TenoneAdSdk::~TenoneAdSdk() {
 }
 
 void TenoneAdSdk::Init(const std::string& app_id) {
+    printf("%s", app_id.c_str());
 }
 
 END_NAMESPACE_TENONE_AD
