@@ -22,9 +22,9 @@ class LoaderDelegate {
     virtual void WaterFallDidLoadFailed() = 0;
     
     virtual void HeaderBidWillLoad() {};
-    virtual void HeaderBidDidLoad(WaterFall* water_fall) {};
-    virtual void HeaderBidDidLoadFailed(WaterFall* water_fall) {};
-}
+    virtual void HeaderBidDidLoad() {};
+    virtual void HeaderBidDidLoadFailed() {};
+};
 
 class Loader {
     virtual void method(WaterFall* water_fall) = 0;
