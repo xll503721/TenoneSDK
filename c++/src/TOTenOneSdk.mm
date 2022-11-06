@@ -2,7 +2,7 @@
 #include "tenone_sdk.h"
 #include "tenone_ad_sdk.h"
 
-@implementation TOTenOneSDK
+@implementation TOTenOneSdk
 
 + (void)initAdAppId:(NSString *)appId {
     NSLog(@"appId is:%@", appId);

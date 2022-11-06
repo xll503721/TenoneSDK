@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface TOTenOneSDK : NSObject
+@interface TOTenOneSdk : NSObject
 
 + (void)initAdAppId:(NSString *)appId;
 
