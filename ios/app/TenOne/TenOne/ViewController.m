@@ -6,7 +6,7 @@
 //
 
 #import "ViewController.h"
-#import "TOTenOneSdk.h"
+#import "TENOneSdk.h"
 
 @interface ViewController ()
 
@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [TOTenOneSdk initAdAppId:@"123"];
+    [TENOneSdk initAdAppId:@"123"];
 }
 
 
