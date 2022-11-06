@@ -15,19 +15,23 @@ BEGIN_NAMESPACE_TENONE_AD
 class LoaderDelegate {
     virtual void PlacementWillLoad() = 0;
     virtual void PlacementDidLoad() = 0;
-    virtual void PlacementDidLoadFailed() = 0;
+    virtual void PlacementDidLoadFail() = 0;
     
     virtual void WaterFallWillLoad() = 0;
     virtual void WaterFallDidLoad(WaterFall* water_fall) = 0;
-    virtual void WaterFallDidLoadFailed() = 0;
+    virtual void WaterFallDidLoadFail() = 0;
     
     virtual void HeaderBidWillLoad() {};
     virtual void HeaderBidDidLoad() {};
-    virtual void HeaderBidDidLoadFailed() {};
+    virtual void HeaderBidDidLoadFail() {};
+    
+    virtual void AdSourceWillLoad() = 0;
+    virtual void AdSourceDidLoad() = 0;
+    virtual void AdSourceDidLoadFail() = 0;
 };
 
 class Loader {
-    virtual void method(WaterFall* water_fall) = 0;
+    virtual void Start(const std::string& placement_id) = 0;
 };
 
 END_NAMESPACE_TENONE_AD
