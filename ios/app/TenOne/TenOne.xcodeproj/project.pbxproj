@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4B016EA7290F89C00012D8ED /* TenoneSDK.framework/TenoneSDK in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B016EA4290F89B00012D8ED /* TenoneSDK.framework/TenoneSDK */; };
 		4B016EA8290F89C00012D8ED /* TenoneSDK.framework/TenoneSDK in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B016EA4290F89B00012D8ED /* TenoneSDK.framework/TenoneSDK */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4B759F9E2916924600B70C23 /* tenone_ad_sdk.framework/tenone_ad_sdk in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B759F9D2916920700B70C23 /* tenone_ad_sdk.framework/tenone_ad_sdk */; };
+		4B759F9F2916924600B70C23 /* tenone_ad_sdk.framework/tenone_ad_sdk in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B759F9D2916920700B70C23 /* tenone_ad_sdk.framework/tenone_ad_sdk */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4BB46CA0290D685900AFE63C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB46C9F290D685900AFE63C /* AppDelegate.m */; };
 		4BB46CA3290D685900AFE63C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB46CA2290D685900AFE63C /* SceneDelegate.m */; };
 		4BB46CA6290D685900AFE63C /* TENMainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4BB46CA5290D685900AFE63C /* TENMainViewController.mm */; };
@@ -30,8 +32,22 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 4BB46CDC290D6A8200AFE63C /* TenOneCommon.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 88F7856293AB4D6E9F5D39B3;
+			remoteGlobalIDString = BF1D83D839204DE7BFBF3BDE;
 			remoteInfo = TenoneSDK;
+		};
+		4B759F972916920700B70C23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BB46CDC290D6A8200AFE63C /* TenOneCommon.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8721EA225E124D3191F09D61;
+			remoteInfo = tenone_ad_sdk;
+		};
+		4B759F9C2916920700B70C23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BB46CDC290D6A8200AFE63C /* TenOneCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 214AE60A516E408AB485362D;
+			remoteInfo = tenone_ad_sdk;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -42,6 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				4B759F9F2916924600B70C23 /* tenone_ad_sdk.framework/tenone_ad_sdk in Embed Frameworks */,
 				4B016EA8290F89C00012D8ED /* TenoneSDK.framework/TenoneSDK in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -70,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B759F9E2916924600B70C23 /* tenone_ad_sdk.framework/tenone_ad_sdk in Frameworks */,
 				4B016EA7290F89C00012D8ED /* TenoneSDK.framework/TenoneSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				4B016EA4290F89B00012D8ED /* TenoneSDK.framework/TenoneSDK */,
+				4B759F9D2916920700B70C23 /* tenone_ad_sdk.framework/tenone_ad_sdk */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,6 +162,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4B759F982916920700B70C23 /* PBXTargetDependency */,
 				4B016EA6290F89BA0012D8ED /* PBXTargetDependency */,
 			);
 			name = TenOne;
@@ -197,6 +217,14 @@
 			remoteRef = 4B016EA3290F89B00012D8ED /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		4B759F9D2916920700B70C23 /* tenone_ad_sdk.framework/tenone_ad_sdk */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = tenone_ad_sdk.framework/tenone_ad_sdk;
+			path = tenone_ad_sdk.framework;
+			remoteRef = 4B759F9C2916920700B70C23 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -231,6 +259,11 @@
 			isa = PBXTargetDependency;
 			name = TenoneSDK;
 			targetProxy = 4B016EA5290F89BA0012D8ED /* PBXContainerItemProxy */;
+		};
+		4B759F982916920700B70C23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = tenone_ad_sdk;
+			targetProxy = 4B759F972916920700B70C23 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

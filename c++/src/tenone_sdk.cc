@@ -1,4 +1,4 @@
-#include "ten_one_sdk.h"
+#include "tenone_sdk.h"
 #include "TENApplication.h"
 #include "platform_macros.h"
 

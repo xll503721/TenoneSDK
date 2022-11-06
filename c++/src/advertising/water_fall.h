@@ -5,9 +5,14 @@
 //  Created by li zhixuan on 2022/11/5.
 //
 
-#ifndef water_fall_h
-#define water_fall_h
+#ifndef TENONE_AD_SDK_WATER_FALL_H
+#define TENONE_AD_SDK_WATER_FALL_H
 
-#include <stdio.h>
+BEGIN_NAMESPACE_TENONE_AD
 
-#endif /* water_fall_h */
+class WaterFall {
+};
+
+END_NAMESPACE_TENONE_AD
+
+#endif /* TENONE_AD_SDK_WATER_FALL_H */

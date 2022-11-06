@@ -1,5 +1,10 @@
 project(TenoneSDK)
 
+set(ALL_FEATURE_FRAMEWORK)
+
+set(COMPILE_AD_FRAMEWORK 1)
+set(AD_FRAMEWORK "tenone_ad_sdk")
+
 file(GLOB
      tenone_src_source
      *.cc
@@ -12,23 +17,19 @@ if(OSX OR IOS)
     list(APPEND tenone_src_source ${tenone_src_source_mm})
 endif()
 
-add_library(${PROJECT_NAME} STATIC ${tenone_src_source})
+if(${COMPILE_AD_FRAMEWORK})
+    list(APPEND ${ALL_FEATURE_FRAMEWORK} ${AD_FRAMEWORK})
+endif()
+
+include_directories(advertising)
 add_subdirectory(advertising)
+add_library(${PROJECT_NAME} STATIC ${tenone_src_source})
+#target_link_libraries(${PROJECT_NAME} ${ALL_FEATURE_FRAMEWORK})
+if(${CMAKE_VERSION} VERSION_GREATER "3.16.0")
+    target_precompile_headers(${PROJECT_NAME} PRIVATE "$<$<COMPILE_LANGUAGE:CXX>:${CMAKE_CURRENT_SOURCE_DIR}/pch.h>")
+endif()
 
-set_target_properties(${PROJECT_NAME} PROPERTIES 
-    XCODE_ATTRIBUTE_CLANG_ENABLE_OBJC_ARC "YES" #设置项目为arc
-    XCODE_ATTRIBUTE_FRAMEWORK_SEARCH_PATHS ""
-    XCODE_ATTRIBUTE_LIBRARY_SEARCH_PATHS "" 
-    XCODE_ATTRIBUTE_LIBRARY_SEARCH_PATHS ""  
-    FRAMEWORK TRUE 
-    FRAMEWORK_VERSION A 
-    MACOSX_FRAMEWORK_IDENTIFIER cn.bizconf.bizav 
-    # MACOSX_FRAMEWORK_INFO_PLIST Info.plist # 
-    "current version" in semantic format in Mach-O binary file VERSION 1.0.0  
-    
-    #SET(CMAKE_XCODE_ATTRIBUTE_DEBUG_INFORMATION_FORMAT "dwarf-with-dsym")
-
-)
+apple_framework_generate(${PROJECT_NAME} "com.gzch.tenone.sdk")
 
 #find_library(UIKIT_FRAMEWORK UIKit)
 #find_library(FOUNDATION_FRAMEWORK Foundation)

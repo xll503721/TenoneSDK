@@ -13,17 +13,8 @@ if(OSX OR IOS)
 endif()
 
 add_library(${PROJECT_NAME} STATIC ${tenone_src_ad_source})
+if(${CMAKE_VERSION} VERSION_GREATER "3.16.0")
+    target_precompile_headers(${PROJECT_NAME} PRIVATE "$<$<COMPILE_LANGUAGE:CXX>:${CMAKE_CURRENT_SOURCE_DIR}/pch.h>")
+endif()
 
-target_precompile_headers(${PROJECT_NAME} PRIVATE pch.h)
-
-set_target_properties(${PROJECT_NAME} PROPERTIES 
-    XCODE_ATTRIBUTE_CLANG_ENABLE_OBJC_ARC "YES" #设置项目为arc
-    FRAMEWORK TRUE 
-    FRAMEWORK_VERSION A 
-    MACOSX_FRAMEWORK_IDENTIFIER cn.bizconf.bizav 
-    # MACOSX_FRAMEWORK_INFO_PLIST Info.plist # 
-    "current version" in semantic format in Mach-O binary file VERSION 1.0.0  
-    
-    #SET(CMAKE_XCODE_ATTRIBUTE_DEBUG_INFORMATION_FORMAT "dwarf-with-dsym")
-
-)
+apple_framework_generate(${PROJECT_NAME} "com.gzch.tenone.ad.sdk")

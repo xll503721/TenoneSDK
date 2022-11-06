@@ -5,8 +5,6 @@
     #import <Foundation/Foundation.h>
 #endif
 
-
-
 class TenOne {
 private:
     int t;

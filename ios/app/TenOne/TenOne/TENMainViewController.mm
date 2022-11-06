@@ -6,7 +6,7 @@
 //
 
 #import "TENMainViewController.h"
-#include "ten_one_sdk.h"
+#include "tenone_sdk.h"
 #import "TENApplication.h"
 #import "TOTenOneSdk.h"
 
@@ -21,11 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    TenOne tenOne;
-    tenOne.test();
     
     self.application = [[TENApplication alloc] init];
-    [TOTenOneSDK initAdAppId:@""];
+    [TOTenOneSDK initAdAppId:@"123"];
 }
 
 
