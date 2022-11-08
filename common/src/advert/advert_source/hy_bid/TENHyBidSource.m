@@ -9,4 +9,8 @@
 
 @implementation TENHyBidSource
 
+- (void)test {
+    
+}
+
 @end

@@ -6,7 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-//#import <KSAdSDK/KSAdSDK.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
