@@ -1,3 +1,5 @@
 .DS_Store
 app/Tenone/Pods
+app/Tenone/Podfile.lock
 app/Tenone/Tenone.xcworkspace
+app/Tenone/TenOne.xcodeproj/xcuserdata
