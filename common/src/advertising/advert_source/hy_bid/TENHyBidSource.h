@@ -1,5 +1,5 @@
 //
-//  PubNativeSource.h
+//  TENHyBidSource.h
 //  tenone_ad_sdk
 //
 //  Created by li zhixuan on 2022/11/6.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PubNativeSource : NSObject
+@interface TENHyBidSource : NSObject
 
 @end
 
