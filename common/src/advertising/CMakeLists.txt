@@ -18,3 +18,4 @@ if(${CMAKE_VERSION} VERSION_GREATER "3.16.0")
 endif()
 
 apple_framework_generate(${PROJECT_NAME} "com.gzch.tenone.ad.sdk")
+add_subdirectory(advert_source/pub_native)
