@@ -18,9 +18,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [TENOneSdk initAdAppId:@"123"];
-    NSString *appId = @"90010";
-    [KSAdSDKManager setAppId:appId];
-    [KSAdSDKManager setLoglevel:KSAdSDKLogLevelOff];
 }
 
 

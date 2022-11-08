@@ -6,10 +6,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <KSAdSDK/KSAdSDK.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TENHyBidSource : NSObject
+
+- (void)test;
 
 @end
 

@@ -11,6 +11,8 @@
 
 - (void)test {
     
+   [KSAdSDKManager setAppId:@"90010"];
+   [KSAdSDKManager setLoglevel:KSAdSDKLogLevelOff];
 }
 
 @end
