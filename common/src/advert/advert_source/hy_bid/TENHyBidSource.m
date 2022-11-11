@@ -9,10 +9,21 @@
 
 @implementation TENHyBidSource
 
-- (void)test {
-    
-   [KSAdSDKManager setAppId:@"90010"];
-   [KSAdSDKManager setLoglevel:KSAdSDKLogLevelOff];
-}
+//- (void)loadWithCategroyType:(TENAdvertSourceCategroyType)categroyType {
+//    [KSAdSDKManager setAppId:@"90010"];
+//    [KSAdSDKManager setLoglevel:KSAdSDKLogLevelOff];
+//    switch (categroyType) {
+//        case TENAdvertSourceCategroyTypeRewardedVideo:
+//            
+//            break;
+//            
+//        default:
+//            break;
+//    }
+//}
+//
+//- (void)loadRewardedVideo {
+//    
+//}
 
 @end

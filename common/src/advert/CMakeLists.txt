@@ -8,7 +8,8 @@ file(GLOB
 if(OSX OR IOS)
     file(GLOB
         tenone_src_ad_source_mm
-        *.mm)
+        *.mm
+        *.m)
     list(APPEND tenone_src_ad_source ${tenone_src_ad_source_mm})
 endif()
 

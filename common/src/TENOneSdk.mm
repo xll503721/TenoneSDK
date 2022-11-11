@@ -11,7 +11,7 @@
     TENONE_AD::TenoneAdSdk::GetInstance().Init(app_id);
     
     TENHyBidSource *hyBidSource = [[TENHyBidSource alloc] init];
-    [hyBidSource test];
+//    [hyBidSource loadWithCategroyType:TENAdvertSourceCategroyTypeBanner];
 }
 
 @end
