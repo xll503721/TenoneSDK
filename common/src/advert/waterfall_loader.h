@@ -18,7 +18,6 @@ private:
     using super_class = MainLoader;
     
 public:
-    WaterfallLoader();
     WaterfallLoader(std::shared_ptr<LoaderInterface> loader);
     void Start(const std::string& placement_id);
     void End();

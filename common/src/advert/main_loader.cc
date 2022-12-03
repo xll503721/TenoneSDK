@@ -9,9 +9,6 @@
 
 BEGIN_NAMESPACE_TENONE_AD
 
-MainLoader::MainLoader() {
-}
-
 MainLoader::MainLoader(std::shared_ptr<LoaderInterface> loader)
 :mainloader_(loader) {
 }

@@ -9,16 +9,13 @@
 
 BEGIN_NAMESPACE_TENONE_AD
 
-WaterfallLoader::WaterfallLoader() {
-    
-}
-WaterfallLoader::WaterfallLoader(std::shared_ptr<LoaderInterface> loader) {
+WaterfallLoader::WaterfallLoader(std::shared_ptr<LoaderInterface> loader):MainLoader(loader) {
     
 }
 
 void WaterfallLoader::Start(const std::string& placement_id) {
     super_class::Start(placement_id);
-    printf("WaterfallLoader Start");
+    printf("WaterfallLoader Start\n");
 }
 
 void WaterfallLoader::End() {

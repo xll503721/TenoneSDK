@@ -13,17 +13,17 @@
 BEGIN_NAMESPACE_TENONE_AD
 
 class MainLoader: public LoaderInterface {
-private:
-    std::shared_ptr<LoaderInterface> mainloader_;
     
 public:
-    MainLoader();
     MainLoader(std::shared_ptr<LoaderInterface> loader);
     void Start(const std::string& placement_id);
     void End();
     
     void RequestPlacement(const std::string& placement_id);
     void Flow(Placement* placement);
+    
+private:
+    std::shared_ptr<LoaderInterface> mainloader_;
 };
 
 END_NAMESPACE_TENONE_AD

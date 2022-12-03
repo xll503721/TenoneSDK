@@ -7,6 +7,7 @@
 
 #include "tenone_ad_sdk.h"
 #include "waterfall_loader.h"
+#include "header_bid_loader.h"
 
 BEGIN_NAMESPACE_TENONE_AD
 
@@ -28,9 +29,10 @@ void TenoneAdSdk::Init(const std::string& app_id) {
 }
 
 void TenoneAdSdk::LoadAdvert(const std::string& placement_id) {
-    loader_ = std::make_shared<MainLoader>();
+    loader_ = std::make_shared<MainLoader>(nullptr);
     std::shared_ptr<WaterfallLoader> waterfallLoader = std::make_shared<WaterfallLoader>(loader_);
-    waterfallLoader->Start(placement_id);
+    std::shared_ptr<HeaderBidLoader> headerBidLoader = std::make_shared<HeaderBidLoader>(waterfallLoader);
+    headerBidLoader->Start(placement_id);
 }
 
 END_NAMESPACE_TENONE_AD
