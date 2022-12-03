@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <KSAdSDK/KSAdSDK.h>
+//#import <KSAdSDK/KSAdSDK.h>
 #import "TENAdvertSource.h"
 
 NS_ASSUME_NONNULL_BEGIN

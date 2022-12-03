@@ -8,15 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		48AFDED668FD85143CD06214 /* Pods_Tenone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B5570036AEF411B216979F /* Pods_Tenone.framework */; };
+		4B71F360291C7BD200C9E8C4 /* TenoneSDK.framework/TenoneSDK in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC748732917BE4C00C26DE3 /* TenoneSDK.framework/TenoneSDK */; };
 		4BC747AC291769E200C26DE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC747AB291769E200C26DE3 /* AppDelegate.m */; };
 		4BC747AF291769E200C26DE3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC747AE291769E200C26DE3 /* SceneDelegate.m */; };
-		4BC747B2291769E200C26DE3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC747B1291769E200C26DE3 /* ViewController.m */; };
+		4BC747B2291769E200C26DE3 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4BC747B1291769E200C26DE3 /* ViewController.mm */; };
 		4BC747B5291769E200C26DE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BC747B3291769E200C26DE3 /* Main.storyboard */; };
 		4BC747B7291769E200C26DE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BC747B6291769E200C26DE3 /* Assets.xcassets */; };
 		4BC747BA291769E200C26DE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BC747B8291769E200C26DE3 /* LaunchScreen.storyboard */; };
 		4BC747BD291769E200C26DE3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC747BC291769E200C26DE3 /* main.m */; };
 		4BC748762917BED200C26DE3 /* tenone_ad_sdk.framework/tenone_ad_sdk in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC748752917BE4C00C26DE3 /* tenone_ad_sdk.framework/tenone_ad_sdk */; };
-		4BC748792917BED500C26DE3 /* TenoneSDK.framework/TenoneSDK in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC748732917BE4C00C26DE3 /* TenoneSDK.framework/TenoneSDK */; };
+		4BC748A12919E07300C26DE3 /* HyBidSource.framework/HyBidSource in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC748A02919E07300C26DE3 /* HyBidSource.framework/HyBidSource */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +35,26 @@
 			remoteGlobalIDString = 2F0D79443F3C4F7B9CDB8C4B;
 			remoteInfo = tenone_ad_sdk;
 		};
-		4BC7487B2917BEE200C26DE3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4BC7486B2917BE4C00C26DE3 /* TenOneCommon.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 84CBA9F9C9DB4734A085BABC;
-			remoteInfo = TenoneSDK;
-		};
 		4BC7487D2917BEE500C26DE3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4BC7486B2917BE4C00C26DE3 /* TenOneCommon.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 6CA958C5A4A24932BE216677;
+			remoteGlobalIDString = BF8D5C81ECCE4BF59F5840CF;
 			remoteInfo = tenone_ad_sdk;
+		};
+		4BC7489F2919E07300C26DE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BC7486B2917BE4C00C26DE3 /* TenOneCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 825A21F9E3EA42DC9EA10441;
+			remoteInfo = HyBidSource;
+		};
+		4BC748A42919E07C00C26DE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BC7486B2917BE4C00C26DE3 /* TenOneCommon.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E452A101807400092AD1FE7;
+			remoteInfo = HyBidSource;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -58,7 +66,7 @@
 		4BC747AD291769E200C26DE3 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		4BC747AE291769E200C26DE3 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		4BC747B0291769E200C26DE3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4BC747B1291769E200C26DE3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4BC747B1291769E200C26DE3 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		4BC747B4291769E200C26DE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BC747B6291769E200C26DE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BC747B9291769E200C26DE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,7 +83,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BC748762917BED200C26DE3 /* tenone_ad_sdk.framework/tenone_ad_sdk in Frameworks */,
-				4BC748792917BED500C26DE3 /* TenoneSDK.framework/TenoneSDK in Frameworks */,
+				4BC748A12919E07300C26DE3 /* HyBidSource.framework/HyBidSource in Frameworks */,
+				4B71F360291C7BD200C9E8C4 /* TenoneSDK.framework/TenoneSDK in Frameworks */,
 				48AFDED668FD85143CD06214 /* Pods_Tenone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,7 +127,7 @@
 				4BC747AD291769E200C26DE3 /* SceneDelegate.h */,
 				4BC747AE291769E200C26DE3 /* SceneDelegate.m */,
 				4BC747B0291769E200C26DE3 /* ViewController.h */,
-				4BC747B1291769E200C26DE3 /* ViewController.m */,
+				4BC747B1291769E200C26DE3 /* ViewController.mm */,
 				4BC747B3291769E200C26DE3 /* Main.storyboard */,
 				4BC747B6291769E200C26DE3 /* Assets.xcassets */,
 				4BC747B8291769E200C26DE3 /* LaunchScreen.storyboard */,
@@ -131,6 +140,7 @@
 		4BC7486C2917BE4C00C26DE3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				4BC748A02919E07300C26DE3 /* HyBidSource.framework/HyBidSource */,
 				4BC748732917BE4C00C26DE3 /* TenoneSDK.framework/TenoneSDK */,
 				4BC748752917BE4C00C26DE3 /* tenone_ad_sdk.framework/tenone_ad_sdk */,
 			);
@@ -154,16 +164,16 @@
 			buildConfigurationList = 4BC747C0291769E200C26DE3 /* Build configuration list for PBXNativeTarget "Tenone" */;
 			buildPhases = (
 				F6D95892104AE1F9F08769BB /* [CP] Check Pods Manifest.lock */,
+				4BC748912919D8A000C26DE3 /* ShellScript */,
 				4BC747A3291769E200C26DE3 /* Sources */,
 				4BC747A4291769E200C26DE3 /* Frameworks */,
 				4BC747A5291769E200C26DE3 /* Resources */,
-				C0893B71C24BA31FF0033E9F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4BC748A52919E07C00C26DE3 /* PBXTargetDependency */,
 				4BC7487E2917BEE500C26DE3 /* PBXTargetDependency */,
-				4BC7487C2917BEE200C26DE3 /* PBXTargetDependency */,
 			);
 			name = Tenone;
 			productName = Tenone;
@@ -225,6 +235,14 @@
 			remoteRef = 4BC748742917BE4C00C26DE3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		4BC748A02919E07300C26DE3 /* HyBidSource.framework/HyBidSource */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = HyBidSource.framework/HyBidSource;
+			path = HyBidSource.framework;
+			remoteRef = 4BC7489F2919E07300C26DE3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -241,22 +259,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C0893B71C24BA31FF0033E9F /* [CP] Embed Pods Frameworks */ = {
+		4BC748912919D8A000C26DE3 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tenone/Pods-Tenone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+			);
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tenone/Pods-Tenone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tenone/Pods-Tenone-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "echo \"end\"\n";
 		};
 		F6D95892104AE1F9F08769BB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -287,7 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BC747B2291769E200C26DE3 /* ViewController.m in Sources */,
+				4BC747B2291769E200C26DE3 /* ViewController.mm in Sources */,
 				4BC747AC291769E200C26DE3 /* AppDelegate.m in Sources */,
 				4BC747BD291769E200C26DE3 /* main.m in Sources */,
 				4BC747AF291769E200C26DE3 /* SceneDelegate.m in Sources */,
@@ -297,15 +315,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4BC7487C2917BEE200C26DE3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TenoneSDK;
-			targetProxy = 4BC7487B2917BEE200C26DE3 /* PBXContainerItemProxy */;
-		};
 		4BC7487E2917BEE500C26DE3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = tenone_ad_sdk;
 			targetProxy = 4BC7487D2917BEE500C26DE3 /* PBXContainerItemProxy */;
+		};
+		4BC748A52919E07C00C26DE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HyBidSource;
+			targetProxy = 4BC748A42919E07C00C26DE3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -450,8 +468,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6YXYV74FF7;
 				ENABLE_BITCODE = NO;
+				GCC_INPUT_FILETYPE = automatic;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = ../../../common/src;
+				HEADER_SEARCH_PATHS = (
+					../../../common/src,
+					../../../common/src/advert,
+				);
 				INFOPLIST_FILE = Tenone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -482,8 +505,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6YXYV74FF7;
 				ENABLE_BITCODE = NO;
+				GCC_INPUT_FILETYPE = automatic;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = ../../../common/src;
+				HEADER_SEARCH_PATHS = (
+					../../../common/src,
+					../../../common/src/advert,
+				);
 				INFOPLIST_FILE = Tenone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

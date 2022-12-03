@@ -13,13 +13,12 @@ typedef NS_ENUM(NSUInteger, TENAdvertSourceCategroyType) {
     TENAdvertSourceCategroyTypeNative,
 };
 
-typedef void (^ActionCallback) (void);
-
 @protocol TENAdvertSourceProtocol <NSObject>
 
 @required
-- (void)loadWithPlacementId:(NSString *)placementId;
 
-- (void)onActionCallback:(ActionCallback)callback;
+//- (instancetype)initWithPlacementId:(NSString *)placementId;
+
+//- (void)onActionCallback:(ActionCallback)callback;
 
 @end

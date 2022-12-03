@@ -14,24 +14,27 @@
 }
 
 @property (nonatomic, strong) ActionCallback actionCallback;
+@property (nonatomic, copy) NSString *placementId;
 
 @end
 
 @implementation TENAdvertView
 
-- (instancetype)initWithCategroyType:(TENAdvertSourceCategroyType)categroyType {
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
-}
-
 - (void)loadWithPlacementId:(NSString *)placementId {
-    TENONE_AD::TenoneAdSdk::GetInstance().Init("");
 }
 
-- (void)onActionCallback:(ActionCallback)callback {
+#pragma mark - uiview
+
+- (void)didMoveToWindow {
+    [super didMoveToWindow];
+}
+
+#pragma mark - setter getter
+- (void)setAdvertCategory:(TENAdvertCategory *)advertCategory {
+    if (!advertCategory.placementId) {
+        return;
+    }
+    _advertCategory = advertCategory;
 }
     
 

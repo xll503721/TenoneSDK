@@ -6,17 +6,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "TENAdvertSourceProtocol.h"
+#import "TENAdvertCategory.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TENAdvertView : NSObject<TENAdvertSourceProtocol>
+@interface TENAdvertView : UIView<TENAdvertSourceProtocol>
 
-- (instancetype)initWithCategroyType:(TENAdvertSourceCategroyType)categroyType;
-
-- (void)loadWithPlacementId:(NSString *)placementId;
-
-- (void)onActionCallback:(ActionCallback)callback;
+@property (nonatomic, strong) TENAdvertCategory *advertCategory;
 
 @end
 
