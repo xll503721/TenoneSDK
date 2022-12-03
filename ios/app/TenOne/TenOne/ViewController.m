@@ -21,13 +21,13 @@
     // Do any additional setup after loading the view.
     [TENOneSdk initAdAppId:@"123" type:TENOneSdkTypeAdvert];
     
-//    TENAdvertView *view = [[TENAdvertView alloc] initWithFrame:CGRectZero];
-//    [self.view addSubview:view];
-//    
-//    TENAdvertCategory *category = [[TENAdvertCategory alloc] initWithPlacementId:@""];
-//    view.advertCategory = category;
-//    
-//    [category load];
+    TENAdvertView *view = [[TENAdvertView alloc] initWithFrame:CGRectZero];
+    [self.view addSubview:view];
+    
+    TENAdvertCategory *category = [[TENAdvertCategory alloc] initWithPlacementId:@""];
+    view.advertCategory = category;
+    
+    [category load];
 }
 
 
