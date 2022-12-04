@@ -19,8 +19,11 @@ if(${CMAKE_VERSION} VERSION_GREATER "3.16.0")
 endif()
 
 apple_framework_generate(${PROJECT_NAME} "cn.gzch.tenone.ad.sdk")
-add_subdirectory(advert_source/hy_bid)
+add_subdirectory(advert_source/hybid)
 add_subdirectory(advert_source/sigmob)
 
 include_directories(advert_source/sigmob)
 include_directories(../)
+
+set_target_folder_if_exist(sigmob_source ad_sdk/source)
+set_target_folder_if_exist(hybid_source ad_sdk/source)

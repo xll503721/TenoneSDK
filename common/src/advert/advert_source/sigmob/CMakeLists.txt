@@ -1,4 +1,4 @@
-project(SigmobSource)
+project(sigmob_source)
 
 file(GLOB
      tenone_src_sigmob_source

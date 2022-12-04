@@ -1,4 +1,4 @@
-project(HyBidSource)
+project(hybid_source)
 
 file(GLOB
      tenone_src_hy_bid_source

@@ -42,6 +42,7 @@ macro(apple_framework_generate
   endif()
 endmacro()
 
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 macro(set_target_folder_if_exist target folder)
   if(TARGET ${target})
     set_target_properties(${target} PROPERTIES FOLDER ${folder})
