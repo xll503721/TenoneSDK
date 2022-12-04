@@ -28,6 +28,7 @@
 {
     self = [super init];
     if (self) {
+        _delegate = delegate;
         WindAdOptions *option = [[WindAdOptions alloc] initWithAppId:AppId appKey:AppKey];
         [WindAds startWithOptions:option];
     }
@@ -55,7 +56,7 @@
 
 #pragma mark - Interstitial Delegate
 - (void)intersititialAdDidLoad:(WindIntersititialAd *)intersititialAd {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(adDidLoadWithCategroyType:)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(adDidLoadWithCategroyType:error:)]) {
         [self.delegate adDidLoadWithCategroyType:TENAdvertSourceCategroyTypeInterstitial error:nil];
     }
 }

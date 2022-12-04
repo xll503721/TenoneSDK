@@ -18,8 +18,8 @@ void WaterfallLoader::Start(const std::string& placement_id) {
     super_class::Start(placement_id);
     printf("WaterfallLoader Start\n");
     
-    std::shared_ptr<AdvertSource> advertSource = std::make_shared<AdvertSource>();
-    advertSource->Load();
+    advert_source_ = std::make_shared<AdvertSource>();
+    advert_source_->Load();
 }
 
 void WaterfallLoader::End() {

@@ -5,6 +5,7 @@
 #include <string.h>
 #include <map>
 #include <iostream>
+#include "platform_macros.h"
 
 #define TENONE_AD tenone_ad
 #define BEGIN_NAMESPACE_TENONE_AD BEGIN_NAMESPACE(TENONE_AD)

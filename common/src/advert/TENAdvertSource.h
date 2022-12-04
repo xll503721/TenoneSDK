@@ -7,6 +7,7 @@
 #ifdef __OBJC__
 
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
 #import "TENAdvertSourceProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -16,6 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithName:(NSString *)name;
 
 @property (nonatomic, strong, readonly) NSString *name;
+
+- (void *)cPlusPlusRetain;
+- (void)cPlusPlusRelease;
 
 - (void)loadWithCategroyType:(TENAdvertSourceCategroyType)categroyType requestType:(TENAdvertSourceRequestType)requestType userInfo:(NSDictionary *)userInfo;
 

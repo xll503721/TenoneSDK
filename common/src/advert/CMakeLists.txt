@@ -23,3 +23,4 @@ add_subdirectory(advert_source/hy_bid)
 add_subdirectory(advert_source/sigmob)
 
 include_directories(advert_source/sigmob)
+include_directories(../)

@@ -25,13 +25,13 @@ TenoneAdSdk::~TenoneAdSdk() {
 void TenoneAdSdk::Init(const std::string& app_id) {
     printf("%s", app_id.c_str());
     
-    
 }
 
 void TenoneAdSdk::LoadAdvert(const std::string& placement_id) {
-    loader_ = std::make_shared<MainLoader>(nullptr);
+    std::shared_ptr<MainLoader> loader = std::make_shared<MainLoader>(nullptr);
     std::shared_ptr<WaterfallLoader> waterfallLoader = std::make_shared<WaterfallLoader>(loader_);
     std::shared_ptr<HeaderBidLoader> headerBidLoader = std::make_shared<HeaderBidLoader>(waterfallLoader);
+    loader_ = headerBidLoader;
     headerBidLoader->Start(placement_id);
 }
 

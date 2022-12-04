@@ -26,7 +26,7 @@ private:
     TenoneAdSdk(const TenoneAdSdk &ad_sdk);
     TenoneAdSdk &operator=(const TenoneAdSdk &ad_sdk);
 private:
-    std::shared_ptr<MainLoader> loader_;
+    std::shared_ptr<LoaderInterface> loader_;
 };
 
 END_NAMESPACE_TENONE_AD

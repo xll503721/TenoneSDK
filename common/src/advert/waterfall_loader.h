@@ -17,6 +17,8 @@ class WaterfallLoader: public MainLoader {
 private:
     using super_class = MainLoader;
     
+    std::shared_ptr<AdvertSource> advert_source_;
+    
 public:
     WaterfallLoader(std::shared_ptr<LoaderInterface> loader);
     void Start(const std::string& placement_id);

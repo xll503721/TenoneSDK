@@ -8,13 +8,21 @@
 #import "TENAdvertSource.h"
 #import "TENSigmobSource.h"
 
-@interface TENAdvertSource ()
+typedef void (^RetainBlock) (void);
+
+@interface TENAdvertSource ()<TENAdvertSourceDelegate>
 
 @property (nonatomic, strong) id<TENAdvertSourceProtocol> advertSource;
+@property (nonatomic, strong) RetainBlock retainBlock;
 
 @end
 
 @implementation TENAdvertSource
+
+- (void)dealloc
+{
+    NSLog(@"TENAdvertSource dealloc");
+}
 
 - (instancetype)initWithName:(NSString *)name
 {
@@ -22,7 +30,13 @@
     if (self) {
         _name = name;
         Class advertSource = NSClassFromString(name);
-        _advertSource = [[advertSource alloc] init];
+        _advertSource = [[advertSource alloc] initWithDelegate:self userInfo:nil];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-retain-cycles"
+        self.retainBlock = ^{
+            [self class];
+        };
+#pragma clang diagnostic pop
     }
     return self;
 }
@@ -39,8 +53,17 @@
     }
 }
 
-- (void)load {
+- (void)adDidLoadWithCategroyType:(TENAdvertSourceCategroyType)categroyType error:(NSError *)error {
     
+}
+
+- (void *)cPlusPlusRetain {
+    self.retainBlock();
+    return (__bridge void *)self;
+}
+
+- (void)cPlusPlusRelease {
+    self.retainBlock = nil;
 }
 
 @end
