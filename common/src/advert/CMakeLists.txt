@@ -20,3 +20,6 @@ endif()
 
 apple_framework_generate(${PROJECT_NAME} "com.gzch.tenone.ad.sdk")
 add_subdirectory(advert_source/hy_bid)
+add_subdirectory(advert_source/sigmob)
+
+include_directories(advert_source/sigmob)

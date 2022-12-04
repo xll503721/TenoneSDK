@@ -22,7 +22,6 @@ if(${COMPILE_AD_FRAMEWORK})
 endif()
 
 include_directories(advert)
-include_directories(advert/advert_source/hy_bid)
 add_subdirectory(advert)
 add_library(${PROJECT_NAME} STATIC ${tenone_src_source})
 #target_link_libraries(${PROJECT_NAME} ${ALL_FEATURE_FRAMEWORK})

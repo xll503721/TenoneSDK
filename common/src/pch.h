@@ -7,6 +7,7 @@
 #include <iostream>
 #include <queue>
 #include <vector>
+#include "platform_macros.h"
 
 #define TENONE_AD tenone_ad
 #define BEGIN_NAMESPACE_TENONE_AD BEGIN_NAMESPACE(TENONE_AD)

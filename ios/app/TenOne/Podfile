@@ -8,5 +8,6 @@ target 'Tenone' do
 
   # Pods for Tenone
 #  pod 'KSAdSDK', '3.3.29'
+  pod 'SigmobAd-iOS'
 
 end

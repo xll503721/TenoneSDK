@@ -1,5 +1,4 @@
 #import "TENOneSdk.h"
-#import "TENHyBidSource.h"
 
 #include "tenone_sdk.h"
 #include "tenone_ad_sdk.h"

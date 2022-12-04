@@ -9,6 +9,9 @@
 #define TENONE_AD_SDK_ADVERT_SOURCE_H
 
 class AdvertSource {
+public:
+    AdvertSource();
+    void Load();
 };
 
 #endif /* TENONE_AD_SDK_ADVERT_SOURCE_H */

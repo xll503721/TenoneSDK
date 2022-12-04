@@ -10,6 +10,7 @@
 		48AFDED668FD85143CD06214 /* Pods_Tenone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B5570036AEF411B216979F /* Pods_Tenone.framework */; };
 		4B5C45F1293B4F8000AD6DD7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5C45F0293B4F8000AD6DD7 /* ViewController.m */; };
 		4B5C45F3293B4F9F00AD6DD7 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5C45F2293B4F9900AD6DD7 /* libc++.tbd */; };
+		4B5C4638293B818500AD6DD7 /* SigmobSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5C462B293B7FB200AD6DD7 /* SigmobSource.framework */; };
 		4B71F360291C7BD200C9E8C4 /* TenoneSDK.framework/TenoneSDK in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC748732917BE4C00C26DE3 /* TenoneSDK.framework/TenoneSDK */; };
 		4BC747AC291769E200C26DE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC747AB291769E200C26DE3 /* AppDelegate.m */; };
 		4BC747AF291769E200C26DE3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC747AE291769E200C26DE3 /* SceneDelegate.m */; };
@@ -22,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4B5C462A293B7FB200AD6DD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BC7486B2917BE4C00C26DE3 /* TenOneCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 851A86C812B143FD970B2E9D;
+			remoteInfo = SigmobSource;
+		};
 		4BC748722917BE4C00C26DE3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4BC7486B2917BE4C00C26DE3 /* TenOneCommon.xcodeproj */;
@@ -40,7 +48,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 4BC7486B2917BE4C00C26DE3 /* TenOneCommon.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 1A9F59711A304B518C5BAF1F;
+			remoteGlobalIDString = 362DB85C350F47B6BF6B006C;
 			remoteInfo = tenone_ad_sdk;
 		};
 		4BC7489F2919E07300C26DE3 /* PBXContainerItemProxy */ = {
@@ -54,7 +62,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 4BC7486B2917BE4C00C26DE3 /* TenOneCommon.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 4EDF87726DC64A12BF7E3246;
+			remoteGlobalIDString = 9951876D34A54EBB9BB768EA;
 			remoteInfo = HyBidSource;
 		};
 /* End PBXContainerItemProxy section */
@@ -63,6 +71,8 @@
 		3CEA8C0BDFE77A49789629A3 /* Pods-Tenone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tenone.release.xcconfig"; path = "Target Support Files/Pods-Tenone/Pods-Tenone.release.xcconfig"; sourceTree = "<group>"; };
 		4B5C45F0293B4F8000AD6DD7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = TenOne/ViewController.m; sourceTree = SOURCE_ROOT; };
 		4B5C45F2293B4F9900AD6DD7 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		4B5C461F293B7FB100AD6DD7 /* WindFoundation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WindFoundation.xcframework; path = "Pods/SigmobAd-iOS/wind-sdk-ios/WindFoundation.xcframework"; sourceTree = "<group>"; };
+		4B5C4620293B7FB100AD6DD7 /* WindSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WindSDK.xcframework; path = "Pods/SigmobAd-iOS/wind-sdk-ios/WindSDK.xcframework"; sourceTree = "<group>"; };
 		4BC747A7291769E200C26DE3 /* Tenone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tenone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC747AA291769E200C26DE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4BC747AB291769E200C26DE3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -86,6 +96,7 @@
 			files = (
 				4BC748762917BED200C26DE3 /* tenone_ad_sdk.framework/tenone_ad_sdk in Frameworks */,
 				4B5C45F3293B4F9F00AD6DD7 /* libc++.tbd in Frameworks */,
+				4B5C4638293B818500AD6DD7 /* SigmobSource.framework in Frameworks */,
 				4BC748A12919E07300C26DE3 /* HyBidSource.framework/HyBidSource in Frameworks */,
 				4B71F360291C7BD200C9E8C4 /* TenoneSDK.framework/TenoneSDK in Frameworks */,
 				48AFDED668FD85143CD06214 /* Pods_Tenone.framework in Frameworks */,
@@ -98,6 +109,8 @@
 		1657CADD1D24E21A55C05D82 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B5C461F293B7FB100AD6DD7 /* WindFoundation.xcframework */,
+				4B5C4620293B7FB100AD6DD7 /* WindSDK.xcframework */,
 				4B5C45F2293B4F9900AD6DD7 /* libc++.tbd */,
 				90B5570036AEF411B216979F /* Pods_Tenone.framework */,
 			);
@@ -145,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				4BC748A02919E07300C26DE3 /* HyBidSource.framework/HyBidSource */,
+				4B5C462B293B7FB200AD6DD7 /* SigmobSource.framework */,
 				4BC748732917BE4C00C26DE3 /* TenoneSDK.framework/TenoneSDK */,
 				4BC748752917BE4C00C26DE3 /* tenone_ad_sdk.framework/tenone_ad_sdk */,
 			);
@@ -223,6 +237,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		4B5C462B293B7FB200AD6DD7 /* SigmobSource.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SigmobSource.framework;
+			remoteRef = 4B5C462A293B7FB200AD6DD7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		4BC748732917BE4C00C26DE3 /* TenoneSDK.framework/TenoneSDK */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;

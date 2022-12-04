@@ -6,6 +6,7 @@
 //
 
 #include "waterfall_loader.h"
+#include "advert_source.h"
 
 BEGIN_NAMESPACE_TENONE_AD
 
@@ -16,6 +17,9 @@ WaterfallLoader::WaterfallLoader(std::shared_ptr<LoaderInterface> loader):MainLo
 void WaterfallLoader::Start(const std::string& placement_id) {
     super_class::Start(placement_id);
     printf("WaterfallLoader Start\n");
+    
+    std::shared_ptr<AdvertSource> advertSource = std::make_shared<AdvertSource>();
+    advertSource->Load();
 }
 
 void WaterfallLoader::End() {

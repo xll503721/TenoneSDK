@@ -1,6 +1,5 @@
 #include "tenone_sdk.h"
 #include "TENApplication.h"
-#include "platform_macros.h"
 
 void TenOne::test() {
     printf("hello world");

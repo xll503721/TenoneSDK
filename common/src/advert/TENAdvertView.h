@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TENAdvertView : UIView<TENAdvertSourceProtocol>
+@interface TENAdvertView : UIView
 
 @property (nonatomic, strong) TENAdvertCategory *advertCategory;
 
