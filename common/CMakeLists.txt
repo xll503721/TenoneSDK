@@ -42,6 +42,12 @@ macro(apple_framework_generate
   endif()
 endmacro()
 
+macro(set_target_folder_if_exist target folder)
+  if(TARGET ${target})
+    set_target_properties(${target} PROPERTIES FOLDER ${folder})
+  endif()
+endmacro()
+
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/output/${PLATFORM})
 
 add_subdirectory(src)

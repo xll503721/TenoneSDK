@@ -14,4 +14,4 @@ include_directories(WindFoundation.framework/Headers)
 include_directories(WindSDK.framework/Headers)
 include_directories(advert/advert_source/sigmob)
 
-apple_framework_generate(${PROJECT_NAME} "com.gzch.tenone.ad.sdk.sigmob")
+apple_framework_generate(${PROJECT_NAME} "cn.gzch.tenone.ad.sdk.sigmob")
