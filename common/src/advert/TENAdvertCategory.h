@@ -20,6 +20,7 @@ typedef void (^ActionCallback) (void);
 - (void)onActionCallback:(ActionCallback)callback;
 
 - (void)load;
+- (void)show;
 
 @end
 

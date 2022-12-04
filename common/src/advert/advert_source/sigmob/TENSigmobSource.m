@@ -11,12 +11,14 @@
 #define AppKey @"eccdcdbd9adbd4a7"//应用key
 #define FullScreenVideoAdPlacementId @"f21b862c1cd"//插屏广告位ID
 
-@interface TENSigmobSource ()<WindIntersititialAdDelegate>
+@interface TENSigmobSource ()<WindIntersititialAdDelegate, TENAdvertSourceProtocol>
 
 @property (nonatomic, strong) WindIntersititialAd *intersititialAd;
 @property (nonatomic, strong) WindSplashAdView *splashAdView;
 @property (nonatomic, strong) WindNativeAdsManager *nativeAdsManager;
 @property (nonatomic, strong) WindRewardVideoAd *rewardVideoAd;
+
+@property (nonatomic, strong) NSMutableDictionary *sigmobAdDictionary;
 
 @property (nonatomic, weak) id<TENAdvertSourceDelegate> delegate;
 
@@ -29,10 +31,60 @@
     self = [super init];
     if (self) {
         _delegate = delegate;
+        _sigmobAdDictionary = @{}.mutableCopy;
         WindAdOptions *option = [[WindAdOptions alloc] initWithAppId:AppId appKey:AppKey];
         [WindAds startWithOptions:option];
     }
     return self;
+}
+
+- (BOOL)isReadyWithType:(TENAdvertSourceCategroyType)categroyType {
+    switch (categroyType) {
+        case TENAdvertSourceCategroyTypeInterstitial: {
+            return [self.intersititialAd isAdReady];
+        }
+            break;
+        case TENAdvertSourceCategroyTypeSplash: {
+            return [self.splashAdView isAdValid];
+        }
+            break;
+        case TENAdvertSourceCategroyTypeRewardedVideo: {
+            return [self.rewardVideoAd isAdReady];
+        }
+            break;
+        case TENAdvertSourceCategroyTypeNative: {
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+    return NO;
+}
+
+- (void)showInView:(UIView *)superView categroyType:(TENAdvertSourceCategroyType)categroyType {
+    switch (categroyType) {
+        case TENAdvertSourceCategroyTypeInterstitial: {
+            [self.intersititialAd showAdFromRootViewController:(UIViewController *)superView.nextResponder options:nil];
+        }
+            break;
+        case TENAdvertSourceCategroyTypeSplash: {
+            [superView addSubview:self.splashAdView];
+        }
+            break;
+        case TENAdvertSourceCategroyTypeRewardedVideo: {
+            return [self.rewardVideoAd isAdReady];
+        }
+            break;
+        case TENAdvertSourceCategroyTypeNative: {
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 #pragma mark - Interstitial
@@ -52,6 +104,7 @@
         [self.intersititialAd setBidFloor:100];
     }
     [self.intersititialAd loadAdData];
+    self.sigmobAdDictionary[@(TENAdvertSourceCategroyTypeInterstitial)] = self.intersititialAd;
 }
 
 #pragma mark - Interstitial Delegate
@@ -62,7 +115,7 @@
 }
 
 - (void)intersititialAdDidLoad:(WindIntersititialAd *)intersititialAd didFailWithError:(NSError *)error {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(adDidLoadWithCategroyType:)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(adDidLoadWithCategroyType:error:)]) {
         [self.delegate adDidLoadWithCategroyType:TENAdvertSourceCategroyTypeInterstitial error:error];
     }
 }
@@ -89,54 +142,12 @@
 
 #pragma mark - Send Win Loss
 - (void)sendWinNotificationWithType:(TENAdvertSourceCategroyType)categroyType userInfo:(NSDictionary *)userInfo {
-    id<WindBiddingProtocol> ad = nil;
-    switch (categroyType) {
-        case TENAdvertSourceCategroyTypeSplash: {
-            ad = self.splashAdView;
-        }
-            break;
-        case TENAdvertSourceCategroyTypeInterstitial: {
-            ad = self.splashAdView;
-        }
-            break;
-        case TENAdvertSourceCategroyTypeRewardedVideo: {
-            ad = self.splashAdView;
-        }
-            break;
-        case TENAdvertSourceCategroyTypeNative: {
-            ad = self.nativeAdsManager;
-        }
-            break;
-            
-        default:
-            break;
-    }
+    id<WindBiddingProtocol> ad = self.sigmobAdDictionary[@(categroyType)];
     [ad sendWinNotificationWithInfo:@{}];
 }
 
 - (void)sendLossNotificationWithType:(TENAdvertSourceCategroyType)categroyType userInfo:(NSDictionary *)userInfo {
-    id<WindBiddingProtocol> ad = nil;
-    switch (categroyType) {
-        case TENAdvertSourceCategroyTypeSplash: {
-            ad = self.splashAdView;
-        }
-            break;
-        case TENAdvertSourceCategroyTypeInterstitial: {
-            ad = self.intersititialAd;
-        }
-            break;
-        case TENAdvertSourceCategroyTypeRewardedVideo: {
-            ad = self.rewardVideoAd;
-        }
-            break;
-        case TENAdvertSourceCategroyTypeNative: {
-            ad = self.nativeAdsManager;
-        }
-            break;
-            
-        default:
-            break;
-    }
+    id<WindBiddingProtocol> ad = self.sigmobAdDictionary[@(categroyType)];
     [ad sendLossNotificationWithInfo:@{}];
 }
 

@@ -5,6 +5,8 @@
 //  Created by li zhixuan on 2022/11/10.
 //
 
+#import <UIKit/UIKit.h>
+
 typedef NS_ENUM(NSUInteger, TENAdvertSourceRequestType) {
     TENAdvertSourceRequestTypeC2S,
     TENAdvertSourceRequestTypeS2S,
@@ -31,6 +33,9 @@ typedef NS_ENUM(NSUInteger, TENAdvertSourceCategroyType) {
 /// init advert source, should init sdk
 /// @param userInfo info
 - (instancetype)initWithDelegate:(id<TENAdvertSourceDelegate>)delegate userInfo:(NSDictionary<id, id> *)userInfo;
+
+- (BOOL)isReadyWithType:(TENAdvertSourceCategroyType)categroyType;
+- (void)showInView:(UIView *)superView categroyType:(TENAdvertSourceCategroyType)categroyType;
 
 @optional
 /// start load interstitial ad

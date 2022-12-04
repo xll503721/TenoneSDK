@@ -36,4 +36,8 @@
     TENONE_AD::TenoneAdSdk::GetInstance().LoadAdvert(self.placementId.UTF8String);
 }
 
+- (void)show {
+    
+}
+
 @end

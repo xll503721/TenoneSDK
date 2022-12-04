@@ -25,6 +25,9 @@
     TENAdvertView *view = [[TENAdvertView alloc] initWithFrame:CGRectZero];
     TENAdvertCategory *category = [[TENAdvertCategory alloc] initWithPlacementId:@""];
     view.advertCategory = category;
+    [category onActionCallback:^{
+        
+    }];
     [category load];
     
     [self.view addSubview:view];
