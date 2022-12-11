@@ -5,7 +5,7 @@
 
 @implementation TENOneSdk
 
-+ (void)initAdAppId:(NSString *)appId type:(TENOneSdkType)type {
++ (void)initAppId:(NSString *)appId type:(TENOneSdkType)type {
     switch (type) {
         case TENOneSdkTypeAdvert: {
             TENONE_AD::TenoneAdSdk::GetInstance().Init([appId UTF8String]);

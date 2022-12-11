@@ -27,7 +27,7 @@ void TenoneAdSdk::Init(const std::string& app_id) {
     
 }
 
-void TenoneAdSdk::LoadAdvert(const std::string& placement_id) {
+void TenoneAdSdk::LoadAdvert(const std::string& placement_id, void* delegate) {
     std::shared_ptr<MainLoader> loader = std::make_shared<MainLoader>(nullptr);
     std::shared_ptr<WaterfallLoader> waterfallLoader = std::make_shared<WaterfallLoader>(loader_);
     std::shared_ptr<HeaderBidLoader> headerBidLoader = std::make_shared<HeaderBidLoader>(waterfallLoader);

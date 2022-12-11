@@ -25,5 +25,5 @@ add_subdirectory(advert_source/sigmob)
 include_directories(advert_source/sigmob)
 include_directories(../)
 
-set_target_folder_if_exist(sigmob_source ad_sdk/source)
-set_target_folder_if_exist(hybid_source ad_sdk/source)
+set_target_folder_if_exist(sigmob_source TenoneSDK/ad_sdk/tenone_ad_sdk_source)
+set_target_folder_if_exist(hybid_source TenoneSDK/ad_sdk/tenone_ad_sdk_source)

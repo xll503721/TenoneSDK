@@ -20,6 +20,11 @@ typedef NS_ENUM(NSUInteger, TENAdvertSourceCategroyType) {
     TENAdvertSourceCategroyTypeNative,
 };
 
+typedef NS_ENUM(NSUInteger, TENAdvertSourceCategroyLoadStatusType) {
+    TENAdvertSourceCategroyLoadStatusTypeSucceed,
+    TENAdvertSourceCategroyLoadStatusTypeFailed,
+};
+
 @protocol TENAdvertSourceDelegate <NSObject>
 
 - (void)adDidLoadWithCategroyType:(TENAdvertSourceCategroyType)categroyType error:(NSError *)error;

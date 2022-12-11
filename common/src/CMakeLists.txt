@@ -32,7 +32,7 @@ if(${CMAKE_VERSION} VERSION_GREATER "3.16.0")
 endif()
 
 apple_framework_generate(${PROJECT_NAME} "cn.gzch.tenone.sdk")
-set_target_folder_if_exist(tenone_ad_sdk ad_sdk)
+set_target_folder_if_exist(tenone_ad_sdk TenoneSDK/ad_sdk)
 
 #find_library(UIKIT_FRAMEWORK UIKit)
 #find_library(FOUNDATION_FRAMEWORK Foundation)

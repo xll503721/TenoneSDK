@@ -19,7 +19,7 @@ typedef NS_ENUM(NSUInteger, TENOneSdkType) {
 
 @interface TENOneSdk : NSObject
 
-+ (void)initAdAppId:(NSString *)appId type:(TENOneSdkType)type;
++ (void)initAppId:(NSString *)appId type:(TENOneSdkType)type;
 
 @end
 

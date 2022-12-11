@@ -17,7 +17,7 @@ class TenoneAdSdk {
 public:
     static TenoneAdSdk &GetInstance();
     void Init(const std::string& app_id);
-    void LoadAdvert(const std::string& placement_id);
+    void LoadAdvert(const std::string& placement_id, void* delegate);
     
 private:
     TenoneAdSdk();

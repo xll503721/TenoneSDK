@@ -9,6 +9,7 @@
 #import "TENOneSdk.h"
 #import "TENAdvertView.h"
 #import "TENAdvertCategory.h"
+#import "TENAdSDK.h"
 
 @interface ViewController ()
 
@@ -20,17 +21,19 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view.
-    [TENOneSdk initAdAppId:@"123" type:TENOneSdkTypeAdvert];
+    [TENOneSdk initAppId:@"123" type:TENOneSdkTypeAdvert];
     
-    TENAdvertView *view = [[TENAdvertView alloc] initWithFrame:CGRectZero];
-    TENAdvertCategory *category = [[TENAdvertCategory alloc] initWithPlacementId:@""];
-    view.advertCategory = category;
-    [category onActionCallback:^{
+    [[TENAdSDK defalutAdSDK] loadWithPlacementId:@"" category:TENAdvertSourceCategroyTypeBanner completionHandler:^(TENAdvertView * _Nonnull view, TENAdvertSourceCategroyLoadStatusType type, NSDictionary<id,id> * _Nonnull userInfo) {
         
     }];
-    [category load];
     
-    [self.view addSubview:view];
+//    TENAdvertView *view = [[TENAdvertView alloc] initWithFrame:CGRectZero];
+//    TENAdvertCategory *category = [[TENAdvertCategory alloc] initWithPlacementId:@""];
+//    view.advertCategory = category;
+//    [category onActionCallback:^{
+//
+//    }];
+//    [category load];
 }
 
 
