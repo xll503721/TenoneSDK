@@ -11,9 +11,7 @@
 		4B5C45F1293B4F8000AD6DD7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5C45F0293B4F8000AD6DD7 /* ViewController.m */; };
 		4B5C45F3293B4F9F00AD6DD7 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5C45F2293B4F9900AD6DD7 /* libc++.tbd */; };
 		4B5C46B4293CA49200AD6DD7 /* hybid_source.framework/hybid_source in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5C46AA293CA2FF00AD6DD7 /* hybid_source.framework/hybid_source */; };
-		4B5C46B5293CA49200AD6DD7 /* hybid_source.framework/hybid_source in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5C46AA293CA2FF00AD6DD7 /* hybid_source.framework/hybid_source */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4B5C46B7293CA49500AD6DD7 /* sigmob_source.framework/sigmob_source in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5C46AC293CA2FF00AD6DD7 /* sigmob_source.framework/sigmob_source */; };
-		4B5C46B8293CA49500AD6DD7 /* sigmob_source.framework/sigmob_source in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5C46AC293CA2FF00AD6DD7 /* sigmob_source.framework/sigmob_source */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4B71F360291C7BD200C9E8C4 /* TenoneSDK.framework/TenoneSDK in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC748732917BE4C00C26DE3 /* TenoneSDK.framework/TenoneSDK */; };
 		4BC747AC291769E200C26DE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC747AB291769E200C26DE3 /* AppDelegate.m */; };
 		4BC747AF291769E200C26DE3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC747AE291769E200C26DE3 /* SceneDelegate.m */; };
@@ -57,25 +55,10 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 4BC7486B2917BE4C00C26DE3 /* TenOneCommon.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 618B20A25586498D87B79DA8;
+			remoteGlobalIDString = 36C5F665F4D94FDDA06EA995;
 			remoteInfo = tenone_ad_sdk;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		4B5C46B6293CA49200AD6DD7 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				4B5C46B8293CA49500AD6DD7 /* sigmob_source.framework/sigmob_source in Embed Frameworks */,
-				4B5C46B5293CA49200AD6DD7 /* hybid_source.framework/hybid_source in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3CEA8C0BDFE77A49789629A3 /* Pods-Tenone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tenone.release.xcconfig"; path = "Target Support Files/Pods-Tenone/Pods-Tenone.release.xcconfig"; sourceTree = "<group>"; };
@@ -196,7 +179,6 @@
 				4BC747A3291769E200C26DE3 /* Sources */,
 				4BC747A4291769E200C26DE3 /* Frameworks */,
 				4BC747A5291769E200C26DE3 /* Resources */,
-				4B5C46B6293CA49200AD6DD7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
